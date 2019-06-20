@@ -8,17 +8,17 @@
 		public function __construct()
 		{
 			
-			$this->conn = new PDO("mysql:host=127.0.0.1;dbname=dbphp7", "root", "Adnarim@80");
+			$this->conn = new PDO("mysql:host=localhost;dbname=dbphp7", "root", "Adnarim@80");
 
 		}
 
-		private function setParams($statment, $parameters = array())
+		private function setParams($statement, $parameters = array())
 		{
 
 			foreach ($parameters as $key => $value)
 			{
 				
-				$this->setParam($key, $value);
+				$this->setParam($statement, $key, $value);
 
 			}
 
